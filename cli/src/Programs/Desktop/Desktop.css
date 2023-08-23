@@ -1,0 +1,60 @@
+.Desktop {
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+}
+
+.taskBar {
+    width: 100vw;
+    height: 5vh;
+    background-color: rgba(5, 33, 56, 0.849);
+    display: flex;
+    justify-content: space-between;
+}
+
+.taskBarItems {
+    width: 80vw;
+    height: 5vh;
+    display: flex;
+}
+
+.taskBarBox {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 49px;
+}
+
+.taskBarBox:hover {
+    background-color: rgba(66, 121, 165, 0.514);
+    cursor: default;
+}
+
+.background {
+    background-image: url('../../IMG/wepik-monocolor-nature-landscape-desktop-wallpaper-20230823200517H0pM.png');
+    display: flex;
+    flex-grow: 1;
+}
+
+.clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    justify-self: flex-end;
+    padding-right: 15px;
+}
+
+.toolTip {
+    min-width: 49px;
+    border: 1px solid black;
+    background-color: white;
+    text-align: center;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 5%;
+}
