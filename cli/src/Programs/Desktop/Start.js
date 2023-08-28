@@ -3,7 +3,6 @@ import { AppsContext } from "../../Context/appsContext"
 import { AppList } from '../../Data/Apps'
 
 const App = ({item}) => {
-    console.log(item)
     return (
         <div>
             <div>{item.icon}</div>
