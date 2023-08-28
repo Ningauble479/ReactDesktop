@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './Styles/index.css';
 import App from './Programs/App.js';
 import reportWebVitals from './Scripts/reportWebVitals';
+import { AppsArea } from './Context/appsContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <AppsArea>
+      <App />
+    </AppsArea>
   </React.StrictMode>
 );
 

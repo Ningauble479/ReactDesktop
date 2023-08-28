@@ -6,38 +6,15 @@
     justify-content: space-between;
 }
 
-.taskBar {
-    width: 100vw;
-    height: 5vh;
-    background-color: rgba(5, 33, 56, 0.849);
-    display: flex;
-    justify-content: space-between;
-}
-
-.taskBarItems {
-    width: 80vw;
-    height: 5vh;
-    display: flex;
-}
-
-.taskBarBox {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 49px;
-}
-
-.taskBarBox:hover {
-    background-color: rgba(66, 121, 165, 0.514);
-    cursor: default;
-}
-
 .background {
     background-image: url('../../IMG/wepik-monocolor-nature-landscape-desktop-wallpaper-20230823200517H0pM.png');
     display: flex;
     flex-grow: 1;
+    background-size: cover;
 }
+
+
+/* Taskbar ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 .clock {
     display: flex;
@@ -57,4 +34,99 @@
     position: absolute;
     z-index: 1;
     bottom: 5%;
+}
+
+.taskBar {
+    width: 100vw;
+    height: 5vh;
+    background-color: rgba(5, 33, 56, 0.849);
+    display: flex;
+    justify-content: space-between;
+}
+
+.taskBarItems {
+    width: 80vw;
+    height: 5vh;
+    display: flex;
+}
+
+.taskBarBox {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 49px;
+}
+
+.taskBarBox:hover {
+    background-color: rgba(66, 121, 165, 0.514);
+    cursor: default;
+}
+
+.activeBar {
+    top: 2%;
+    width: 90%;
+    left: 2%;
+    height: 2%;
+    background-color: gray;
+}
+
+/* Start --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.Start {
+    width: 25vw;
+    overflow: hidden;
+    height: 60vh;
+    position: absolute;
+    bottom: 5.5vh;
+    left: .5vw;
+    border: 1px solid black;
+    background-color: rgb(37, 64, 87);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    transition: all .2s;
+    z-index: 99999;
+}
+
+.startClosed {
+    height: 0!important;
+    border: 0!important;
+    transition: all .2s;
+}
+
+.search {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.appsList {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recommendedApps {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchbar {
+    width: 80%;
+    border-radius: 25px;
+    border: 0;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
