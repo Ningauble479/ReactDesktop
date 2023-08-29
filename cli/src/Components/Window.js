@@ -15,9 +15,9 @@ export const Window = ({ children, item}) => {
     return (
         <>
         <div 
-        className={fullScreen ? "fullscreen" : !item.active ? "hidden window" : "window"} 
-        ref={targetRef} 
-        style={focused ? {zIndex: 99999} : {zIndex: item.id}} 
+        className={fullScreen ? "fullscreen" : !item.active ? "hidden window" : "window"}
+        ref={targetRef}
+        style={focused ? {zIndex: 99999} : {zIndex: item.id}}
         onMouseDown={()=>setFocused(item)}
         >
             <div className="info">
@@ -26,9 +26,9 @@ export const Window = ({ children, item}) => {
                     <h2>{name ? name : null}</h2>
                 </div>
                 <div className='actions'>
-                    <div onClick={()=> item.active ? setActive(item, false) : setActive(item, true)}><AiOutlineMinus/></div>
-                    <div onClick={(e)=>{fullScreen ? setFullScreen(false) : setFullScreen(true)}}><BsArrowsFullscreen/></div>
-                    <div onClick={()=>removeFromList(item)}><AiOutlineClose/></div>
+                    <div onMouseUp={()=> item.active ? setActive(item, false) : setActive(item, true)}><AiOutlineMinus/></div>
+                    <div onMouseUp={(e)=>{fullScreen ? setFullScreen(false) : setFullScreen(true)}}><BsArrowsFullscreen/></div>
+                    <div onMouseUp={()=>removeFromList(item)}><AiOutlineClose/></div>
                 </div>
             </div>
             <div className='childContainer'>
