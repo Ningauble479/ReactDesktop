@@ -8,10 +8,20 @@ export const AppsContext = createContext("")
 export const AppsArea = ({children}) => {
     const [ activeList, setActiveList ] = useState([])
     const [ startOpen, setStartOpen ] = useState(false)
+    
+    const setFocused = (item) => {
+        let filteredList = activeList.map((lItem, key)=>{
+            if(lItem.name === item.name)return {...lItem, focused: true}
+            if(lItem.name !== item.name)return {...lItem, focused: false}
+        })
+        setActiveList(filteredList)
+    }
+
 
     const addToList = (item) => {
         let found = activeList.find(lItem => lItem.name === item.name)
         if(found) {
+            if(found.active && !found.focused) return setFocused(item)
             let filteredList = activeList.map((lItem, key)=>{
                 if(lItem.name === item.name) return found.active ? {...lItem, active: false} : {...lItem, active: true}
                 return lItem
@@ -29,14 +39,6 @@ export const AppsArea = ({children}) => {
     const removeFromList = (item) => {
         let filteredList = activeList.filter(lItem=>lItem.name != item.name)
         filteredList.map((item, key)=>item.id = key + 1)
-        setActiveList(filteredList)
-    }
-
-    const setFocused = (item) => {
-        let filteredList = activeList.map((lItem, key)=>{
-            if(lItem.name === item.name)return {...lItem, focused: true}
-            if(lItem.name !== item.name)return {...lItem, focused: false}
-        })
         setActiveList(filteredList)
     }
 

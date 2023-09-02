@@ -3,9 +3,12 @@ import { AppsContext } from "../../Context/appsContext"
 import { AppList } from '../../Data/Apps'
 
 const App = ({item}) => {
-    const { addToList, setStartOpen } = useContext(AppsContext)
+    const { addToList, setStartOpen, setFocused } = useContext(AppsContext)
     return (
-        <div className="app" onClick={()=>{addToList(item); setStartOpen(false)}} >
+        <div className="app" onClick={()=>{
+        setFocused(item)
+        addToList(item);
+        setStartOpen(false)}}>
             <>{item.icon}</>
             <div>{item.name}</div>
         </div>
@@ -16,8 +19,8 @@ const AppsList = ({appList}) => {
 
     return (
         <>
-            {appList.map((item, key)=>{if(key < 4)return <App item={item}/>})}
-            {appList.map((item, key)=>{if(key > 4 && key < 8)return <App item={item}/>})}
+            {appList.map((item, key)=>{if(key < 4) return <App item={item}/>})}
+            {appList.map((item, key)=>{if(key >= 4 && key <= 8) return <App item={item}/>})}
         </>
     )
 }

@@ -59,6 +59,12 @@
     width: 49px;
 }
 
+.taskBarBox svg {
+    color: white; 
+    width: 50%;
+    height: 100%;
+}
+
 .taskBarBox:hover {
     background-color: rgba(66, 121, 165, 0.514);
     cursor: default;
@@ -111,11 +117,11 @@
     height: 40%;
     display: grid;
     grid-template-columns: 24% 24% 24% 24%;
-    grid-template-rows: 33% 33% 33%; 
+    grid-template-rows: 30% 30% 30%; 
     grid-template-areas: 
     "header header header header";
     column-gap: 1%;
-    row-gap: 1%;
+    row-gap: 5%;
     justify-content: center;
     align-items: center;
     color: white;
@@ -158,4 +164,5 @@
 
 .app:hover {
     background-color: gray;
+    cursor: pointer;
 }

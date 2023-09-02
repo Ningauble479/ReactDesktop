@@ -1,5 +1,5 @@
 import '../Styles/Window.css'
-import { useContext, useRef, useState } from 'react'
+import { useContext, useEffect, useRef, useState } from 'react'
 import { BsArrowsFullscreen } from 'react-icons/bs'
 import { AiOutlineClose, AiOutlineMinus } from 'react-icons/ai'
 import Moveable from "react-moveable";
@@ -8,19 +8,33 @@ export const Window = ({ children, item}) => {
 
     const [fullScreen, setFullScreen] = useState(false)
     const targetRef = useRef(null);
-
+    const dragTargetRef = useRef(null);
+    const [doubleClick, setDoubleClick] = useState(false)
     const { name, icon, focused } = item
-    const { removeFromList, setFocused, setActive } = useContext(AppsContext)
+    const { removeFromList, setFocused, setActive, setStartOpen } = useContext(AppsContext)
+    
+    useEffect(()=>{
+        setFocused(item)
+    },[item.active])
+
+
+    const handleClick = () => {
+            fullScreen ? setFullScreen(false) : setFullScreen(true)
+    } 
+
 
     return (
         <>
         <div 
-        className={fullScreen ? "fullscreen" : !item.active ? "hidden window" : "window"}
         ref={targetRef}
+        className={fullScreen ? "fullscreen" : !item.active ? "hidden window" : "window"}
         style={focused ? {zIndex: 99999} : {zIndex: item.id}}
-        onMouseDown={()=>setFocused(item)}
+        onMouseDown={()=>{
+            setStartOpen(false)
+            setFocused(item)
+        }}
         >
-            <div className="info">
+            <div ref={dragTargetRef} className="info" onDoubleClick={()=>handleClick()}>
                 <div className='infoName'>
                     {icon}
                     <h2>{name ? name : null}</h2>
@@ -31,12 +45,13 @@ export const Window = ({ children, item}) => {
                     <div onMouseUp={()=>removeFromList(item)}><AiOutlineClose/></div>
                 </div>
             </div>
-            <div className='childContainer'>
+            <div className='childContainer' onClick={(e)=>e.stopPropagation} onMouseDown={(e)=>e.stopPropagation} onMouseUp={(e)=>e.stopPropagation}>
                 {children}
             </div>
         </div>
         <Moveable 
             target={targetRef}
+            dragTarget={dragTargetRef}
             draggable={true}
             throttleDrag={1}
             edgeDraggable={true}
@@ -53,7 +68,10 @@ export const Window = ({ children, item}) => {
                 e.target.style.height = `${e.height}px`;
                 e.target.style.transform = e.drag.transform;
             }}
-            onDrag={e => {e.target.style.transform = e.transform; setFullScreen(false)}}
+            onDrag={e => {
+                setStartOpen(false)
+                e.target.style.transform = e.transform; setFullScreen(false)
+            }}
             
         />
         </>
