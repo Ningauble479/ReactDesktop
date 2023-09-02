@@ -1,7 +1,10 @@
 
 import { Resume } from '../Programs/Resume/Resume'
 import { FcDocument } from 'react-icons/fc'
-import { BsFillFileEarmarkPersonFill } from 'react-icons/bs'
+import { BsFillFileEarmarkPersonFill, BsCodeSlash } from 'react-icons/bs'
+import { AboutMe } from '../Programs/AboutMe/AboutMe'
+import { Projects } from '../Programs/Projects/Projects'
+
 export const resume = {
         app: <Resume/>,
         name: "Resume",
@@ -9,12 +12,21 @@ export const resume = {
     }
 
 export const aboutMe = {
-        app: <div>test</div>,
+        app: <AboutMe/>,
         name: "About Me",
         icon: <BsFillFileEarmarkPersonFill/>
 }
 
+export const projects = {
+    app: <Projects/>,
+    name: "Projects",
+    icon: <BsCodeSlash/>
+}
+
 export const AppList = [
     resume,
-    aboutMe
+    aboutMe,
+    projects
 ]
+
+export const TaskBarList = AppList
