@@ -9,8 +9,9 @@
 .background {
     background-image: url('../../IMG/wepik-monocolor-nature-landscape-desktop-wallpaper-20230823200517H0pM.png');
     display: flex;
-    flex-grow: 1;
     background-size: cover;
+    height: 95vh;
+    width: 100vw;
 }
 
 

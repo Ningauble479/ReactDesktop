@@ -6,6 +6,8 @@
     background-color: rgb(26,26,26);
     color: white;
     overflow: auto;
+    padding-right: 5%;
+    padding-left: 5%;
 }
 
 .centeredColumn {
@@ -44,4 +46,13 @@
 
 .myInfo {
 
+}
+
+.flex {
+    display: flex;
+}
+
+.centeredFlex {
+    justify-content: center;
+    align-items: center;
 }
