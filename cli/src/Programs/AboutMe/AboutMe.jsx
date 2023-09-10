@@ -103,6 +103,8 @@ const Footer = () => {
 }
 
 export const AboutMe = () => {
+
+    
     return (
         <div className="aboutMe">
             <div className='section sectionHeightNormal'>
