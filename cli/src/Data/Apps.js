@@ -1,7 +1,8 @@
-
-import { Resume } from '../Programs/Resume/Resume'
 import { FcDocument } from 'react-icons/fc'
 import { BsFillFileEarmarkPersonFill, BsCodeSlash, BsGearFill, BsFillMoonStarsFill } from 'react-icons/bs'
+import { TfiNotepad } from 'react-icons/tfi'
+
+import { Resume } from '../Programs/Resume/Resume'
 import { AboutMe } from '../Programs/AboutMe/AboutMe'
 import { Projects } from '../Programs/Projects/Projects'
 import { Settings } from '../Programs/Settings/Settings.js'
@@ -10,7 +11,7 @@ import { MdOutlineForum } from 'react-icons/md'
 import { Lune } from '../Programs/Lune/Lune'
 import { Roshi } from '../Programs/Roshi/Roshi'
 import { GiHealthNormal } from 'react-icons/gi'
-
+import { Notes } from '../Programs/Notes/Notes'
 export const resume = {
         app: <Resume/>,
         name: "Resume",
@@ -53,10 +54,16 @@ export const roshi = {
     icon: <GiHealthNormal/>
 }
 
+export const notes = {
+    app: <Notes/>,
+    name: "Notes",
+    icon: <TfiNotepad/>
+}
+
 export const TaskBarList = [
     resume,
     aboutMe,
     projects
 ]
 
-export const AppList = [...TaskBarList, settings, blog, lune, roshi]
+export const AppList = [...TaskBarList, settings, blog, lune, roshi, notes]

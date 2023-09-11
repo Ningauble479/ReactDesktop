@@ -15,7 +15,8 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    width: 50%;
+    max-width: 50%;
+    min-width: 460px;
     padding-left: 5%;
     padding-right: 5%;
 }
@@ -23,7 +24,10 @@
 .section {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     width: 100%;
+    max-width: 2000px;
+    flex-wrap: wrap;
 }
 
 .sectionHeightNormal {
@@ -66,3 +70,52 @@
     left: 0;
   }
   
+.hex {
+    float: left;
+    margin-left: 3px;
+    margin-bottom: -47px;
+}
+
+.hex .top {
+    width: 0;
+    border-bottom: 50px solid rgb(45, 43, 59);
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+}
+
+.hex .middle {
+    width: 150px;
+    height: 90px;
+    background: rgb(45, 43, 59);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hex .bottom {
+    width: 0;
+    border-top: 50px solid rgb(45, 43, 59);
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+}
+
+.hex-row {
+    clear: left;
+}
+
+.hex-row .even {
+    margin-left: 0px;
+}
+
+.hexagon {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 459px;
+}
+
+@media only screen and (max-width: 1496px) {
+    .section { 
+        flex-direction: column;
+    }
+}

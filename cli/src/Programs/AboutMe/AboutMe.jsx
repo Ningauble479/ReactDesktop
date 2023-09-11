@@ -1,6 +1,21 @@
 import './aboutMe.css'
 import {BsFillPersonFill} from 'react-icons/bs'
 
+const Hexagon = ({children, color}) => {
+    return (
+        <div style={{color: color}} className={`hex`}>
+            <div className='top'>
+
+            </div>
+            <div className='middle'>
+                {children}
+            </div>
+            <div className='bottom'>
+
+            </div>
+        </div>
+    )
+}
 
 const SectionOne = () => {
     return (
@@ -14,7 +29,21 @@ const SectionOne = () => {
                 </div>
             </div>
             <div className="centeredColumn rightColumn">
-                List of languages
+                <div className='hexagon'>
+                    <div className='hex-row'>
+                        <Hexagon text="PHP">PHP</Hexagon>
+                        <Hexagon text="JS" >JS</Hexagon>
+                    </div>
+                    <div className='hex-row'>
+                        <Hexagon text="CSS">CSS</Hexagon>
+                        <Hexagon text="HTML">HTML</Hexagon>
+                        <Hexagon text="React">REACT</Hexagon>
+                    </div>
+                    <div className='hex-row'>
+                        <Hexagon text="Node">NODE</Hexagon>
+                        <Hexagon text="C#">C#</Hexagon>
+                    </div>
+                </div>
             </div>
         </>
     )
