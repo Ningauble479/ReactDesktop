@@ -1,49 +1,59 @@
 import './aboutMe.css'
-import {BsFillPersonFill} from 'react-icons/bs'
+import { BsFillPersonFill } from 'react-icons/bs'
+import { BiLogoReact } from 'react-icons/bi'
+import { DiJavascript1 } from 'react-icons/di'
+import { FaPhp, FaNode } from 'react-icons/fa'
+import { MdHtml, MdCss } from 'react-icons/md'
+import { useState } from 'react'
 
 const Hexagon = ({children, color}) => {
+    const [focused, setFocused] = useState(false)
     return (
-        <div style={{color: color}} className={`hex`}>
+        <div style={{color: color}} className={`hex`} onMouseEnter={()=>setFocused(true)} onMouseLeave={()=>setFocused(false)}>
             <div className='top'>
-
+                {focused ? <div className='shadow'/> : null}
             </div>
             <div className='middle'>
+                {focused ? <div className='shadow'/> : null}
                 {children}
             </div>
             <div className='bottom'>
-
+                {focused ? <div className='shadow'/> : null}
             </div>
         </div>
     )
 }
-
 const SectionOne = () => {
+
+    const fullSize = {width: '100%', height: '100%'}
     return (
         <>
             <div className="centeredColumn leftColumn">
                 <div className="myPicture">
-                    <BsFillPersonFill style={{width: '100%', height: '100%'}}/>
+                    <BsFillPersonFill style={{width: '55%', height: '55%'}}/>
                 </div>
                 <div className="myInfo">
+                <h1>About Me</h1>
                 Hi there! I'm Devon Owen, a dedicated Web Developer who is passionate about crafting intuitive and user-centered digital experiences.
                 </div>
             </div>
             <div className="centeredColumn rightColumn">
                 <div className='hexagon'>
                     <div className='hex-row'>
-                        <Hexagon text="PHP">PHP</Hexagon>
-                        <Hexagon text="JS" >JS</Hexagon>
+                        <Hexagon text="PHP"><FaPhp style={fullSize}/></Hexagon>
+                        <Hexagon text="JS" ><DiJavascript1 style={fullSize}/></Hexagon>
                     </div>
                     <div className='hex-row'>
-                        <Hexagon text="CSS">CSS</Hexagon>
-                        <Hexagon text="HTML">HTML</Hexagon>
-                        <Hexagon text="React">REACT</Hexagon>
+                        <Hexagon text="CSS"><MdCss style={fullSize}/></Hexagon>
+                        <Hexagon text="HTML"><MdHtml style={fullSize}/></Hexagon>
+                        <Hexagon text="React"><BiLogoReact style={fullSize}/></Hexagon>
                     </div>
                     <div className='hex-row'>
-                        <Hexagon text="Node">NODE</Hexagon>
-                        <Hexagon text="C#">C#</Hexagon>
+                        <Hexagon text="Node"><FaNode style={fullSize}/></Hexagon>
+                        <Hexagon text="C#"><h1>C#</h1></Hexagon>
                     </div>
                 </div>
+                <h1 style={{marginTop: '5vh'}}>Known Programming Languages</h1>
             </div>
         </>
     )
@@ -136,31 +146,31 @@ export const AboutMe = () => {
     
     return (
         <div className="aboutMe">
-            <div className='section sectionHeightNormal'>
+            <div className='section'>
                 <SectionOne/>
             </div>
-            <div className='section sectionHeightNormal'>
+            <div className='section'>
                 <SectionTwo/>
             </div>
-            <div className='section sectionHeightNormal'>
+            <div className='section'>
                 <SectionThree/>
             </div>
-            <div className='section sectionHeightNormal'>
+            <div className='section'>
                 <SectionFour/>
             </div>
-            <div className='section sectionHeightNormal'>
+            <div className='section'>
                 <SectionFive/>
             </div>
-            <div className='section sectionHeightNormal'>
+            <div className='section'>
                 <SectionSix/>
             </div>
-            <div className='section sectionHeightNormal'>
+            <div className='section'>
                 <SectionSeven/>
             </div>
-            <div className='section sectionHeightNormal'>
+            <div className='section'>
                 <SectionEight/>
             </div>
-            <div className='section sectionHeightNormal'>
+            <div className='section'>
                 <Footer/>
             </div>
         </div>

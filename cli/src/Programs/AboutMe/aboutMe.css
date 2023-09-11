@@ -15,7 +15,7 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    max-width: 50%;
+    max-width: 40%;
     min-width: 460px;
     padding-left: 5%;
     padding-right: 5%;
@@ -28,28 +28,17 @@
     width: 100%;
     max-width: 2000px;
     flex-wrap: wrap;
-}
-
-.sectionHeightNormal {
-    height: 40vh;
     padding-top: 5vh;
 }
 
-.leftColumn {
-
-}
-
-.rightColumn {
-
+.sectionHeightNormal {
+    min-height: 40vh;
+    padding-top: 5vh;
 }
 
 .myPicture {
     width: 50%;
     height: 50%;
-}
-
-.myInfo {
-
 }
 
 .flex {
@@ -70,10 +59,32 @@
     left: 0;
   }
   
+
+
+/* Hexagon CSS --------------------------------------------------------------------------------------------------------------------------------------------------- */
 .hex {
     float: left;
     margin-left: 3px;
     margin-bottom: -47px;
+    transition: all .2s;
+}
+
+.hex:hover {
+    transform: translate(-10px, -10px);
+    transition: all .2s;
+}
+
+.hex .top .shadow {
+    width: 0%;
+    border-bottom: 50px solid black;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    height: 0%;
+    left: 18px;
+    top: 3px;
+    z-index: -1;
+    position: absolute;
+    filter: blur(3px);
 }
 
 .hex .top {
@@ -83,6 +94,16 @@
     border-right: 75px solid transparent;
 }
 
+.hex .middle .shadow {
+    width: 10%;
+    height: 50%;
+    z-index: -1;
+    position: absolute;
+    left: 101%;
+    background: black;
+    filter: blur(3px);
+}
+
 .hex .middle {
     width: 150px;
     height: 90px;
@@ -90,6 +111,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.hex .bottom .shadow {
+    width: 0%;
+    border-top: 50px solid black;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    height: 0%;
+    left: 18px;
+    top: 140px;
+    z-index: -1;
+    position: absolute;
+    filter: blur(3px);
 }
 
 .hex .bottom {
@@ -113,6 +147,8 @@
     flex-direction: column;
     width: 459px;
 }
+
+/* End Hexagon CSS -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 @media only screen and (max-width: 1496px) {
     .section { 
