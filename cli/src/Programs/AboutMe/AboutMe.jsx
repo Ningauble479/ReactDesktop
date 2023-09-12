@@ -4,7 +4,8 @@ import { BiLogoReact } from 'react-icons/bi'
 import { DiJavascript1 } from 'react-icons/di'
 import { FaPhp, FaNode } from 'react-icons/fa'
 import { MdHtml, MdCss } from 'react-icons/md'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import { ParticlesDiv } from '../../Components/Animations/Particles'
 
 const Hexagon = ({children, color}) => {
     const [focused, setFocused] = useState(false)
@@ -26,6 +27,8 @@ const Hexagon = ({children, color}) => {
 const SectionOne = () => {
 
     const fullSize = {width: '100%', height: '100%'}
+
+
     return (
         <>
             <div className="centeredColumn leftColumn">
@@ -141,13 +144,14 @@ const Footer = () => {
     )
 }
 
-export const AboutMe = () => {
-
-    
+export const AboutMe = ({breakPoint}) => {
+    const ref = useRef(null)
     return (
-        <div className="aboutMe">
-            <div className='section'>
+        <div className="aboutMe" ref={ref}>
+            <div className={`section ${breakPoint === 'smallWidth' ? 'sectionOne' : null}`}>
+            <ParticlesDiv breakPoint={breakPoint}>
                 <SectionOne/>
+            </ParticlesDiv>
             </div>
             <div className='section'>
                 <SectionTwo/>
@@ -173,6 +177,7 @@ export const AboutMe = () => {
             <div className='section'>
                 <Footer/>
             </div>
+
         </div>
     )
 }

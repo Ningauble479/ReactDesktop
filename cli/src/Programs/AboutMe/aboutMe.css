@@ -6,8 +6,10 @@
     background-color: rgb(26,26,26);
     color: white;
     overflow: auto;
-    padding-right: 5%;
-    padding-left: 5%;
+}
+
+.sectionOne {
+    min-height: 880px
 }
 
 .centeredColumn {
@@ -26,9 +28,8 @@
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    max-width: 2000px;
+    max-width: 100%;
     flex-wrap: wrap;
-    padding-top: 5vh;
 }
 
 .sectionHeightNormal {
@@ -149,9 +150,3 @@
 }
 
 /* End Hexagon CSS -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
-
-@media only screen and (max-width: 1496px) {
-    .section { 
-        flex-direction: column;
-    }
-}

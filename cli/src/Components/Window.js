@@ -1,5 +1,5 @@
 import '../Styles/Window.css'
-import { useContext, useEffect, useRef, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import { BsArrowsFullscreen } from 'react-icons/bs'
 import { AiOutlineClose, AiOutlineMinus } from 'react-icons/ai'
 import Moveable from "react-moveable";
@@ -12,15 +12,34 @@ export const Window = ({ children, item}) => {
     const [doubleClick, setDoubleClick] = useState(false)
     const { name, icon, focused } = item
     const { removeFromList, setFocused, setActive, setStartOpen } = useContext(AppsContext)
-    
+    const [width, setWidth] = useState(0) 
+    const [breakPoint, setBreakPoint] = useState('largeMonitor') 
+
+
     useEffect(()=>{
         setFocused(item)
     },[item.active])
 
+    useEffect(()=>{
+        console.log(width)
+        if(width<1298){
+            setBreakPoint('smallWidth')
+        } else if (width >= 1298) {
+            setBreakPoint('largeMonitor')
+        }
+    },[width])
 
     const handleClick = () => {
             fullScreen ? setFullScreen(false) : setFullScreen(true)
     } 
+
+    const renderChildren = () => {
+        return React.Children.map(children, (child) => {
+            return React.cloneElement(child, {
+                breakPoint: breakPoint
+            })
+        })
+    }
 
 
     return (
@@ -46,7 +65,7 @@ export const Window = ({ children, item}) => {
                 </div>
             </div>
             <div className='childContainer' onClick={(e)=>e.stopPropagation} onMouseDown={(e)=>e.stopPropagation} onMouseUp={(e)=>e.stopPropagation}>
-                {children}
+                {renderChildren()}
             </div>
         </div>
         <Moveable 
@@ -67,6 +86,7 @@ export const Window = ({ children, item}) => {
                 e.target.style.width = `${e.width}px`;
                 e.target.style.height = `${e.height}px`;
                 e.target.style.transform = e.drag.transform;
+                setWidth(e.width)
             }}
             onDrag={e => {
                 setStartOpen(false)
