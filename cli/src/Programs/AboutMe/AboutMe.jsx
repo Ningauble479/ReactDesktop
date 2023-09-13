@@ -6,7 +6,7 @@ import { FaPhp, FaNode } from 'react-icons/fa'
 import { MdHtml, MdCss } from 'react-icons/md'
 import { useEffect, useRef, useState } from 'react'
 import { ParticlesDiv } from '../../Components/Animations/Particles'
-
+import windowGif from '../../IMG/pixel-art-room.gif'
 const Hexagon = ({children, color}) => {
     const [focused, setFocused] = useState(false)
     return (
@@ -31,13 +31,14 @@ const SectionOne = () => {
 
     return (
         <>
-            <div className="centeredColumn leftColumn">
-                <div className="myPicture">
-                    <BsFillPersonFill style={{width: '55%', height: '55%'}}/>
-                </div>
+            <div className="centeredColumn leftColumn background-picture">
+                {/* <div className="myPicture"> */}
+                    {/*  */}
+                    {/* <BsFillPersonFill style={{width: '55%', height: '55%'}}/> */}
+                {/* </div> */}
                 <div className="myInfo">
-                <h1>About Me</h1>
-                Hi there! I'm Devon Owen, a dedicated Web Developer who is passionate about crafting intuitive and user-centered digital experiences.
+                <h1 className='aboutMeHeader'>About Me</h1>
+                <h1>Hi there! I'm Devon Owen, a dedicated Web Developer who is passionate about crafting intuitive and user-centered digital experiences.</h1>
                 </div>
             </div>
             <div className="centeredColumn rightColumn">
@@ -59,6 +60,20 @@ const SectionOne = () => {
                 <h1 style={{marginTop: '5vh'}}>Known Programming Languages</h1>
             </div>
         </>
+    )
+}
+
+const WindowSegment = () => {
+    return (
+        <div className='windowBoxWrapper'>
+            <div className='windowBoxTop'/>
+            <div className='windowBoxLeft'/>
+            <div className='windowBox'>
+            <img style={{height: '110%'}} src={windowGif} alt='loading...'/>
+            </div>
+            <div className='windowBoxRight'/>
+            <div className='windowBoxBottom'/>
+        </div>
     )
 }
 
@@ -146,12 +161,16 @@ const Footer = () => {
 
 export const AboutMe = ({breakPoint}) => {
     const ref = useRef(null)
+    console.log(breakPoint)
     return (
         <div className="aboutMe" ref={ref}>
             <div className={`section ${breakPoint === 'smallWidth' ? 'sectionOne' : null}`}>
-            <ParticlesDiv breakPoint={breakPoint}>
+            {/* <ParticlesDiv breakPoint={breakPoint}> */}
                 <SectionOne/>
-            </ParticlesDiv>
+            {/* </ParticlesDiv> */}
+            </div>
+            <div className='section'>
+                <WindowSegment/>
             </div>
             <div className='section'>
                 <SectionTwo/>

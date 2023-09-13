@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "Misdemeanor";
+  src: local("Misdemeanor"),
+   url("../fonts/Misdemeanor/Misdemeanor-Oyx8.ttf") format("truetype");
+  font-weight: bold;
+ }

@@ -3,13 +3,27 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: rgb(26,26,26);
+    background: linear-gradient(163deg, transparent 0px, transparent 1px, #cfb1b1 1px, #c59e9e 14px, transparent 14px), linear-gradient(161deg, transparent 0px, #d39e9e 1px, #d5adad 2px, #cbabab 15px, transparent 15px), linear-gradient(343deg, transparent 0px, transparent 1px, #dbb1b1 1px, #bfa0a0 14px, transparent 14px), linear-gradient(343deg, transparent 0px, transparent 1px, #d1a9a9 1px, #dbc0c0 14px, transparent 14px);
+    background-color: #130c0c;
+    background-position: 2px 1px, 23px 16px,48px 15px, 21px 30px;
+    background-size: 48px 30px;
     color: white;
     overflow: auto;
 }
 
 .sectionOne {
-    min-height: 880px
+    min-height: 1460px;
+}
+
+.aboutMeHeader {
+    font-size: 200px;
+    font-family: 'Misdemeanor', cursive;
+    color: #ff0000;
+    /* font-weight: 1000; */
+    -webkit-text-stroke: 1px #e5ff00;
+    margin: 0;
+    
+    mix-blend-mode: overlay;
 }
 
 .centeredColumn {
@@ -21,6 +35,10 @@
     min-width: 460px;
     padding-left: 5%;
     padding-right: 5%;
+}
+
+.rightColumn {
+    padding-top: 50px;
 }
 
 .section {
@@ -40,6 +58,7 @@
 .myPicture {
     width: 50%;
     height: 50%;
+    mix-blend-mode: overlay;
 }
 
 .flex {
@@ -59,15 +78,89 @@
     top: 0;
     left: 0;
   }
-  
+
+.pole {
+    position: absolute;
+    height: 15px;
+    width: 20%;
+    background: gray;
+    bottom: 0;
+    left: 0;
+}
 
 
+/* Window Segment ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.windowBoxWrapper {
+    position: relative;
+    height: 650px;
+    width: 550px;
+}
+
+.windowBox {
+    width: 100%;
+    height: 500px;
+    border: 1px solid black;
+    background-color: white;
+    overflow: hidden;
+}
+
+.windowBoxTop {
+    width: 105%;
+    height: 30px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: #bb6d6d;
+    position: absolute;
+    z-index: 1;
+    left: -10px;
+    top: -10px;
+    box-shadow: 3px 2px 1px 1px black;
+}
+
+.windowBoxLeft {
+    width: 300px;
+    background: #bb6d6d;
+    height: 74%;
+    position: absolute;
+    left: -270px;
+    top: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 1px 1px 1px 1px black;
+}
+
+.windowBoxRight {
+    width: 300px;
+    background: #bb6d6d;
+    height: 74%;
+    position: absolute;
+    /* left: -270px; */
+    right: -50%;
+    top: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.windowBoxBottom {
+    width: 105%;
+    height: 30px;
+    /* border-bottom-left-radius: 20px; */
+    /* border-bottom-right-radius: 20px; */
+    background-color: #bb6d6d;
+    position: absolute;
+    z-index: 1;
+    left: -10px;
+    bottom: 118px;
+    box-shadow: 1px 1px 1px 1px black;
+}
 /* Hexagon CSS --------------------------------------------------------------------------------------------------------------------------------------------------- */
 .hex {
     float: left;
     margin-left: 3px;
     margin-bottom: -47px;
     transition: all .2s;
+    outline: 1ps solid white
 }
 
 .hex:hover {
@@ -147,6 +240,8 @@
     align-items: center;
     flex-direction: column;
     width: 459px;
+    
+    mix-blend-mode: overlay;
 }
 
 /* End Hexagon CSS -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */

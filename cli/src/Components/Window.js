@@ -21,13 +21,17 @@ export const Window = ({ children, item}) => {
     },[item.active])
 
     useEffect(()=>{
-        console.log(width)
-        if(width<1298){
+        if(width<1298 && width > 0){
             setBreakPoint('smallWidth')
         } else if (width >= 1298) {
             setBreakPoint('largeMonitor')
         }
     },[width])
+
+    useEffect(()=>{
+        console.log(targetRef.current.offsetWidth)
+        setWidth(targetRef.current.offsetWidth)
+    },[fullScreen])
 
     const handleClick = () => {
             fullScreen ? setFullScreen(false) : setFullScreen(true)
