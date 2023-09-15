@@ -7,6 +7,7 @@ import { MdHtml, MdCss } from 'react-icons/md'
 import { useEffect, useRef, useState } from 'react'
 import { ParticlesDiv } from '../../Components/Animations/Particles'
 import windowGif from '../../IMG/pixel-art-room.gif'
+import WindowImg from '../../IMG/WindowByForheksedOnDeviantArt.png'
 const Hexagon = ({children, color}) => {
     const [focused, setFocused] = useState(false)
     return (
@@ -65,18 +66,23 @@ const SectionOne = () => {
 
 const WindowSegment = () => {
     return (
+        <>
         <div className='windowBoxWrapper'>
-            <div className='windowBoxTop'/>
-            <div className='windowBoxLeft'/>
-            <div className='windowBox'>
-            <img style={{height: '110%'}} src={windowGif} alt='loading...'/>
-            </div>
-            <div className='windowBoxRight'/>
-            <div className='windowBoxBottom'/>
+            <img src={WindowImg} className='windowBoxOuter'/>
+            <img className='windowBoxInner' src={windowGif} alt='loading...'/>
         </div>
+        </>
     )
 }
 
+            {/* <div className='windowBoxTop'/> */}
+            {/* <div className='windowBoxLeft'/> */}
+            {/* <div className='windowBox'> */}
+            {/* <img style={{height: '110%'}} src={windowGif} alt='loading...'/> */}
+            {/* </div> */}
+            {/* <div className='windowBoxRight'/> */}
+            {/* <div className='windowBoxBottom'/> */}
+        {/* </div> */}
 const SectionTwo = () => {
     return (
         <div>
@@ -164,12 +170,13 @@ export const AboutMe = ({breakPoint}) => {
     console.log(breakPoint)
     return (
         <div className="aboutMe" ref={ref}>
+            <div className='brickWall'>
             <div className={`section ${breakPoint === 'smallWidth' ? 'sectionOne' : null}`}>
             {/* <ParticlesDiv breakPoint={breakPoint}> */}
                 <SectionOne/>
             {/* </ParticlesDiv> */}
             </div>
-            <div className='section'>
+            <div className='section' style={{justifyContent: 'flex-start'}}>
                 <WindowSegment/>
             </div>
             <div className='section'>
@@ -196,7 +203,7 @@ export const AboutMe = ({breakPoint}) => {
             <div className='section'>
                 <Footer/>
             </div>
-
+            </div>
         </div>
     )
 }
