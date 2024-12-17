@@ -1,0 +1,70 @@
+{
+    "hero": {
+        "header": "Hello, my name is Devon",
+        "p1": "A dedicated Web Developer passionate about the tech industry and its endless possibilities."
+    },
+    "missionStatement": {
+        "header": "Mission Statement",
+        "p1": "Im on a mission to leave my mark on the world in any way i can. I want to create useful things and programs that change how the world works.",
+        "p2": "A childhood wrapped in technology, I have always been a technology fanatic. I built my own computer at 9 with my dad and I havent been able to walk away since.",
+        "p3": "From learning how to create full stack applications with mern to having a professional understanding of operating systems I love the process of automating tasks and creating solutions and have for years.",
+        "p4": "Watching what I create get used by other people is what drives me to keep creating. It's addicting and I love it."
+    },
+    "journey": {
+        "header": "Professional Journey",
+        "p1": "My career in software development began with a strong foundation in web development. I started by learning how to create full stack applications with MERN.",
+        "timeline": [
+            {
+                "date": "2018-2021",
+                "descriptionOne": "I took a web development bootcamp at UCI in Irvine California and learned how to create full stack applications with mern.",
+                "descriptionTwo": "I teamed up with some colleauges to create a full stack application named RoshiHealth designed to help people meet health goals using ReactJS for the client and NodeJS for the web server. We used MongoDB as our database using Compass for storage.",
+                "descriptionThree": "I began working on A NextJS Social Media platform with MongoDB as our database. After working on RoshiHealth I was able to focus on learning how to structure applications properly rather than learning the syntax.",
+                "descriptionFour": "I got my A+ Certifications and began working on learning networking and how it works with software development.",
+                "descriptionFive": "I moved to Arizona and began to further my knowledge of networking and IT basics to prepare for a career in the field."
+
+            },
+            {
+                "date": "2021-Present",
+                "descriptionOne": "I moved to Minnesota and began working at MCSI as a Junior Developer. I used the knowledge I gained from working on my own projects and learning new technologies to contribute to the development of custom web applications.",
+                "descriptionTwo": "I was hired by GreatWoods cabinetry to create a custom built website for them so they could recieve orders online as well as manage their network infrastructure and help repair broken equipment.",
+                "descriptionThree": "I worked with TDX Technologies to further my career in networking and software support.",
+                "descriptionFour": "I am currently working with UptimeLegal as T3 Software support where ive learned to manage and work with the windows operating system in depth.",
+                "descriptionFive": "I began getting into game development with Unity and began learning C#."
+            }
+        ]
+    },
+    "uxPhilosophy": {
+        "header": "My UX Philosophy",
+        "p1": "I firmly believe that a successful application is simple and effective. The point of a program is to make a task as easy as possible and to help teach the user how to most effectively use the program."
+    },
+    "connect": {
+        "header": "Lets Connect",
+        "p1": "When I'm not coding or designing, you can find me [Hobbies/Interests Outside of Work]. These activities fuel my creativity, inspire new ideas, and provide the balance needed to excel in the fast-paced world of UX programming.",
+        "p2": "When I'm not coding or designing, you can find me [Hobbies/Interests Outside of Work]. These activities fuel my creativity, inspire new ideas, and provide the balance needed to excel in the fast-paced world of UX programming."
+    },
+    "whatDrivesMe": {
+        "header": "What drives me",
+        "p1": "When I'm not coding or designing, you can find me [Hobbies/Interests Outside of Work]. These activities fuel my creativity, inspire new ideas, and provide the balance needed to excel in the fast-paced world of UX programming.",
+        "p2": "When I'm not coding or designing, you can find me [Hobbies/Interests Outside of Work]. These activities fuel my creativity, inspire new ideas, and provide the balance needed to excel in the fast-paced world of UX programming."
+    },
+    "testimonials": {
+        "header": "Testimonials",
+        "p1": "But don't just take my word for it. Here's what some of my collaborators have to say about working with me"
+    },
+    "thankYou": {
+        "header": "Thank You",
+        "p1": "Thank you for exploring my UX programming portfolio and getting to know me better. I'm excited about the opportunity to collaborate with you and contribute to creating exceptional digital experiences."
+    },
+    "knownLanguages": {
+        "header": "Known Programming Languages",
+        "p1": "I'm proficient in several programming languages, each serving a unique purpose in my UX programming toolkit. These languages enable me to:",
+        "list": [
+            "Create dynamic and responsive web applications",
+            "Implement complex algorithms for efficient data processing",
+            "Develop interactive user interfaces that engage and inform"
+        ]
+    },
+    "footer": {
+        "p1": "Made using the Cursor IDE."
+    }
+}

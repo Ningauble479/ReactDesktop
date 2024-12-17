@@ -1,5 +1,5 @@
-import { createContext, useState } from 'react'
-
+import { createContext, useState, useEffect } from 'react'
+import { aboutMe } from '../Data/Apps'
 export const AppsContext = createContext("")
 
 
@@ -8,6 +8,10 @@ export const AppsContext = createContext("")
 export const AppsArea = ({children}) => {
     const [ activeList, setActiveList ] = useState([])
     const [ startOpen, setStartOpen ] = useState(false)
+
+    useEffect(() => {
+        addToList(aboutMe)
+    }, [])
     
     const setFocused = (item) => {
         let filteredList = activeList.map((lItem, key)=>{
