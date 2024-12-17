@@ -150,26 +150,12 @@ const SectionFive = () => {
 
 const SectionSix = () => {
     return (
-        <div className='flex centeredFlex'>
-            <div>{text.connect.p1}</div>
-            <div>
-                <h1>{text.connect.header}</h1>
-                <p>{text.connect.p2}</p>
-            </div>
-        </div>
-    )
-}
-
-const SectionSeven = () => {
-    return(
         <div>
-            <h1>{text.testimonials.header}</h1>
-            <p>{text.testimonials.p1}</p>
-            <div>
-                <p>// "[Client/Colleague Name], [Company]: [Testimonial]"</p>
-                <p>// "[Client/Colleague Name], [Company]: [Testimonial]"</p>
-                <p>// "[Client/Colleague Name], [Company]: [Testimonial]"</p>
-            </div>
+            <h1>{text.connect.header}</h1>
+                <p>{text.connect.p1}</p>
+                <p>{text.connect.p2}</p>
+                <p>{text.connect.p3}</p>
+                <p>{text.connect.p4}</p>
         </div>
     )
 }
@@ -198,8 +184,7 @@ export const AboutMe = ({breakPoint}) => {
         <div className="aboutMe" ref={ref}>
             <div className='brickWall'>
 
-                    <SectionOne/>
-                
+                <SectionOne/>
                 {/* ... other sections ... */}
                 <motion.div 
                     className={`section ${breakPoint === 'smallWidth' ? 'sectionTwo' : null}`}
@@ -248,15 +233,6 @@ export const AboutMe = ({breakPoint}) => {
                     transition={{ duration: 0.5 }}
                 >
                     <SectionSix/>
-                </motion.div>
-                <motion.div 
-                    className={`section ${breakPoint === 'smallWidth' ? 'sectionSeven' : null}`}
-                    id="section7"
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                >
-                    <SectionSeven/>
                 </motion.div>
                 <motion.div 
                     className='section'

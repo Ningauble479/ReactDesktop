@@ -39,17 +39,19 @@
     },
     "connect": {
         "header": "Lets Connect",
-        "p1": "When I'm not coding or designing, you can find me [Hobbies/Interests Outside of Work]. These activities fuel my creativity, inspire new ideas, and provide the balance needed to excel in the fast-paced world of UX programming.",
-        "p2": "When I'm not coding or designing, you can find me [Hobbies/Interests Outside of Work]. These activities fuel my creativity, inspire new ideas, and provide the balance needed to excel in the fast-paced world of UX programming."
+        "p1": "Email: devonvowen@gmail.com",
+        "p2": "Phone: 949-394-8138",
+        "p3": "LinkedIn: https://www.linkedin.com/in/devon-owen-124342138/"
     },
     "whatDrivesMe": {
         "header": "What drives me",
-        "p1": "When I'm not coding or designing, you can find me [Hobbies/Interests Outside of Work]. These activities fuel my creativity, inspire new ideas, and provide the balance needed to excel in the fast-paced world of UX programming.",
-        "p2": "When I'm not coding or designing, you can find me [Hobbies/Interests Outside of Work]. These activities fuel my creativity, inspire new ideas, and provide the balance needed to excel in the fast-paced world of UX programming."
+        "p1": "I have a passion for technology and the endless possibilities it offers. I love to learn and create new things and I am always looking for new challenges to tackle.",
+        "p2": "Watching worldwide developments like the willow chip and the rise of AI is absolutely fascinating and I am excited to see and be a part of that future."
     },
     "testimonials": {
         "header": "Testimonials",
         "p1": "But don't just take my word for it. Here's what some of my collaborators have to say about working with me"
+
     },
     "thankYou": {
         "header": "Thank You",
