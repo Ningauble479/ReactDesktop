@@ -5,15 +5,17 @@ import App from './Programs/App.js';
 import reportWebVitals from './Scripts/reportWebVitals';
 import { AppsArea } from './Context/appsContext';
 import { ThemeProvider } from './Context/themeContext.js';
-
+import { BrowserRouter as Router } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AppsArea>
-      <ThemeProvider>
-        <App />
-      </ThemeProvider>
-    </AppsArea>
+      <Router>
+        <AppsArea>
+          <ThemeProvider>
+            <App />
+          </ThemeProvider>
+        </AppsArea>
+      </Router>
   </React.StrictMode>
 );
 
