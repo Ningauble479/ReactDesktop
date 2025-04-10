@@ -19,7 +19,6 @@ export const Window = ({ children, item}) => {
     const windowRef = useRef(null); //Reference to the window for React-Moveable
     const infoBarRef = useRef(null); //Reference to the info bar for React-Moveable
     const [width, setWidth] = useState(0) 
-    const [breakPoint, setBreakPoint] = useState('largeMonitor') 
 
     const { removeFromList, setFocused, setActive, setStartOpen } = useContext(AppsContext)
 
@@ -27,15 +26,6 @@ export const Window = ({ children, item}) => {
     useEffect(()=>{
         setFocused(item)
     },[item.active])
-
-    //Sets the break point for the window based on the width of the window
-    useEffect(()=>{
-        if(width<1298 && width > 0){
-            setBreakPoint('smallWidth')
-        } else if (width >= 1298) {
-            setBreakPoint('largeMonitor')
-        }
-    },[width])
 
     //Sets the width of the window to the width of the desktop making it full screen
     useEffect(()=>{
@@ -46,16 +36,6 @@ export const Window = ({ children, item}) => {
     const handleFullScreen = () => {
         fullScreen ? setFullScreen(false) : setFullScreen(true)
     } 
-
-    //Maps through the child components of window and passes the break point to them Will be replaced with CSS after commit
-    const renderChildren = () => {
-        return React.Children.map(children, (child) => {
-            return React.cloneElement(child, {
-                breakPoint: breakPoint
-            })
-        })
-    }
-
 
     return (
         <>
@@ -81,7 +61,7 @@ export const Window = ({ children, item}) => {
                 </div>
             </div>
             <div className='childContainer' onClick={(e)=>e.stopPropagation} onMouseDown={(e)=>e.stopPropagation} onMouseUp={(e)=>e.stopPropagation}>
-                {renderChildren()}
+                {children}
             </div>
         </div>
         <Moveable
