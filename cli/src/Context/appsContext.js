@@ -2,9 +2,6 @@ import { createContext, useState, useEffect } from 'react'
 import { aboutMe } from '../Data/Apps'
 export const AppsContext = createContext("")
 
-
-
-
 export const AppsArea = ({children}) => {
     const [ activeList, setActiveList ] = useState([])
     const [ startOpen, setStartOpen ] = useState(false)

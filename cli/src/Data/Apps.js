@@ -75,4 +75,4 @@ export const TaskBarList = [
     projects
 ]
 
-export const AppList = [...TaskBarList, settings, blog, lune,lune,lune,lune,lune,lune,lune,lune,lune,lune,lune,lune,lune, roshi, notes]
+export const AppList = [...TaskBarList, notes]
