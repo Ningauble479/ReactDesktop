@@ -18,7 +18,6 @@ export const Window = ({ children, item}) => {
     const [fullScreen, setFullScreen] = useState(false)
     const windowRef = useRef(null); //Reference to the window for React-Moveable
     const infoBarRef = useRef(null); //Reference to the info bar for React-Moveable
-    const [width, setWidth] = useState(0) 
 
     const { removeFromList, setFocused, setActive, setStartOpen } = useContext(AppsContext)
 
@@ -26,11 +25,6 @@ export const Window = ({ children, item}) => {
     useEffect(()=>{
         setFocused(item)
     },[item.active])
-
-    //Sets the width of the window to the width of the desktop making it full screen
-    useEffect(()=>{
-        setWidth(windowRef.current.offsetWidth)
-    },[fullScreen])
 
     //Handles the double click to toggle full screen
     const handleFullScreen = () => {
@@ -76,13 +70,12 @@ export const Window = ({ children, item}) => {
                 e.target.style.width = `${e.width}px`;
                 e.target.style.height = `${e.height}px`;
                 e.target.style.transform = e.drag.transform;
-                setWidth(e.width)
-            }}
+            }}//Moveables onResize event change the width and height of the window fires when width or height is changed in the css
             onDrag={e => {
                 setStartOpen(false)
-                e.target.style.transform = e.transform; setFullScreen(false)
+                setFullScreen(false)
+                e.target.style.transform = e.transform; 
             }}
-            
         />
         </>
     )

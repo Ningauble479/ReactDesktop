@@ -1,9 +1,6 @@
 import { AiFillWindows, AiOutlineSearch } from 'react-icons/ai' 
-import { FcDocument } from 'react-icons/fc'
-import { BsFillFileEarmarkPersonFill, BsCodeSlash } from 'react-icons/bs'
 import { useContext, useEffect, useState } from 'react'
 import { AppsContext } from '../../Context/appsContext'
-import { Resume } from '../Resume/Resume'
 import { TaskBarList } from '../../Data/Apps'
 
 export const TaskBox = ({item}) => {
@@ -58,7 +55,7 @@ export const TaskBox = ({item}) => {
 export const TaskBar = () => {
     const [currentDateTime, setCurrentDateTime] = useState(new Date())
     const timeText = currentDateTime.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
-    const { setActiveList, setStartOpen, activeList } = useContext(AppsContext)
+    const { setStartOpen, activeList } = useContext(AppsContext)
 
     const startItems = [
         {

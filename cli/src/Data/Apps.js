@@ -13,6 +13,10 @@ import { Roshi } from '../Programs/Roshi/Roshi'
 import { GiHealthNormal } from 'react-icons/gi'
 import { Notes } from '../Programs/Notes/Notes'
 
+//Summary section ------------------------------------------------------------
+//This file contains a list of json objects that contain the data for each app. It also exports each app for easy access to information.
+// --------------------------------------------------------------------------
+
 export const resume = {
         app: <Resume/>,
         name: "Resume",

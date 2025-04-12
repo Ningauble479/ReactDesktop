@@ -7,6 +7,12 @@ import { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { FaLaptopCode, FaUserAstronaut } from 'react-icons/fa'
 import text from './text.json'
+
+//Summary section ------------------------------------------------------------
+//This component is the about me page. It shows a timeline of my journey as a developer and shares some information about me.
+// --------------------------------------------------------------------------
+
+//A hexagon 
 const Hexagon = ({children, color}) => {
     const [focused, setFocused] = useState(false)
     return (
