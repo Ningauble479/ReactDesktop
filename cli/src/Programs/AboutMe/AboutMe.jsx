@@ -12,7 +12,7 @@ import text from './text.json'
 //This component is the about me page. It shows a timeline of my journey as a developer and shares some information about me.
 // --------------------------------------------------------------------------
 
-//A hexagon 
+//A hexagon showing known languages. Currently out of date.
 const Hexagon = ({children, color}) => {
     const [focused, setFocused] = useState(false)
     return (
@@ -52,13 +52,13 @@ const KnownLanguages = () => {
                     </div>
                 </div>
                 <h1 style={{marginTop: '5vh'}}>{text.knownLanguages.header}</h1>
+                <p>I have since started learning Java, Python, and C.</p>
             </div>
         </div>
     )
 }
 
 const SectionOne = () => {
-
     return (
         <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -188,8 +188,6 @@ export const AboutMe = ({breakPoint}) => {
     
     return (
         <div className="aboutMe" ref={ref}>
-            <div className='brickWall'>
-
                 <SectionOne/>
                 {/* ... other sections ... */}
                 <motion.div 
@@ -257,7 +255,6 @@ export const AboutMe = ({breakPoint}) => {
                 >
                     <Footer/>
                 </motion.div>
-            </div>
         </div>
     )
 }

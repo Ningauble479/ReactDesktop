@@ -5,37 +5,36 @@
     },
     "missionStatement": {
         "header": "Mission Statement",
-        "p1": "Im on a mission to leave my mark on the world in any way i can. I want to create useful things and programs that change how the world works.",
-        "p2": "A childhood wrapped in technology, I have always been a technology fanatic. I built my own computer at 9 with my dad and I havent been able to walk away since.",
-        "p3": "From learning how to create full stack applications with mern to having a professional understanding of operating systems I love the process of automating tasks and creating solutions and have for years.",
-        "p4": "Watching what I create get used by other people is what drives me to keep creating. It's addicting and I love it."
+        "p1": "I'm driven to build tools and applications that genuinely improve how people work, live, and interact with technology.",
+        "p2": "I've been immersed in tech since childhood — I built my first computer at 9 with my dad, and I’ve been hooked ever since.",
+        "p3": "From building full-stack applications with the MERN stack to developing a professional-level understanding of operating systems, I’ve always loved automating tasks and crafting practical solutions.",
+        "p4": "Seeing people use and benefit from what I build is what keeps me going. It’s deeply satisfying — and I love every part of the process."
     },
-    "journey": {
-        "header": "Professional Journey",
-        "p1": "My career in software development began with a strong foundation in web development. I started by learning how to create full stack applications with MERN.",
-        "timeline": [
-            {
-                "date": "2018-2021",
-                "descriptionOne": "I took a web development bootcamp at UCI in Irvine California and learned how to create full stack applications with mern.",
-                "descriptionTwo": "I teamed up with some colleauges to create a full stack application named RoshiHealth designed to help people meet health goals using ReactJS for the client and NodeJS for the web server. We used MongoDB as our database using Compass for storage.",
-                "descriptionThree": "I began working on A NextJS Social Media platform with MongoDB as our database. After working on RoshiHealth I was able to focus on learning how to structure applications properly rather than learning the syntax.",
-                "descriptionFour": "I got my A+ Certifications and began working on learning networking and how it works with software development.",
-                "descriptionFive": "I moved to Arizona and began to further my knowledge of networking and IT basics to prepare for a career in the field."
-
-            },
-            {
-                "date": "2021-Present",
-                "descriptionOne": "I moved to Minnesota and began working at MCSI as a Junior Developer. I used the knowledge I gained from working on my own projects and learning new technologies to contribute to the development of custom web applications.",
-                "descriptionTwo": "I was hired by GreatWoods cabinetry to create a custom built website for them so they could recieve orders online as well as manage their network infrastructure and help repair broken equipment.",
-                "descriptionThree": "I worked with TDX Technologies to further my career in networking and software support.",
-                "descriptionFour": "I am currently working with UptimeLegal as T3 Software support where ive learned to manage and work with the windows operating system in depth.",
-                "descriptionFive": "I began getting into game development with Unity and began learning C#."
-            }
-        ]
+"journey": {
+  "header": "Professional Journey",
+  "p1": "I started my software development career by building full-stack applications with the MERN stack, which gave me a solid foundation in modern web technologies.",
+  "timeline": [
+    {
+      "date": "2018–2021",
+      "descriptionOne": "I completed a web development bootcamp at UCI in Irvine, where I learned to build full-stack applications using the MERN stack.",
+      "descriptionTwo": "During that time, I co-developed RoshiHealth, a wellness app that helped users track health goals. I worked on the front end using React.js, while our backend used Node.js and MongoDB.",
+      "descriptionThree": "After that, I began building a social media platform using Next.js and MongoDB, shifting my focus from syntax to architecture and project structure.",
+      "descriptionFour": "I also earned my CompTIA A+ certification and began exploring how networking ties into software development.",
+      "descriptionFive": ""
     },
+    {
+      "date": "2021–Present",
+      "descriptionOne": "After moving to Minnesota, I joined MCSI as a Junior Developer, where I contributed to custom web applications and continued expanding my skills through personal projects.",
+      "descriptionTwo": "I then worked with GreatWoods Cabinetry, developing a custom ordering site and assisting with network infrastructure and hardware repairs.",
+      "descriptionThree": "My time with TDX Technologies deepened my experience in software support and networking, leading to my current role at UptimeLegal as a Tier 3 Software Support Engineer.",
+      "descriptionFour": "There, I’ve developed a strong understanding of Windows systems and enterprise-level software environments.",
+      "descriptionFive": ""
+    }
+  ]
+},
     "uxPhilosophy": {
         "header": "My UX Philosophy",
-        "p1": "I firmly believe that a successful application is simple and effective. The point of a program is to make a task as easy as possible and to help teach the user how to most effectively use the program."
+        "p1": "I believe successful applications should be simple, effective, and intuitive. A great program makes tasks easier and helps users accomplish them without friction."
     },
     "connect": {
         "header": "Lets Connect",
@@ -45,13 +44,8 @@
     },
     "whatDrivesMe": {
         "header": "What drives me",
-        "p1": "I have a passion for technology and the endless possibilities it offers. I love to learn and create new things and I am always looking for new challenges to tackle.",
-        "p2": "Watching worldwide developments like the willow chip and the rise of AI is absolutely fascinating and I am excited to see and be a part of that future."
-    },
-    "testimonials": {
-        "header": "Testimonials",
-        "p1": "But don't just take my word for it. Here's what some of my collaborators have to say about working with me"
-
+        "p1": "I'm passionate about technology and always exploring new ideas. I love to learn, build, and take on challenges that push my skills forward.",
+        "p2": "I'm especially excited by developments in AI and hardware innovation — I can't wait to help shape that future."
     },
     "thankYou": {
         "header": "Thank You",
@@ -67,6 +61,6 @@
         ]
     },
     "footer": {
-        "p1": "Made using the Cursor IDE."
+        "p1": "Built in React and assembled using the Cursor IDE."
     }
 }
