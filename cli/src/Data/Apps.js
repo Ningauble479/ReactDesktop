@@ -4,7 +4,7 @@ import { TfiNotepad } from 'react-icons/tfi'
 
 import { Resume } from '../Programs/Resume/Resume'
 import { AboutMe } from '../Programs/AboutMe/AboutMe'
-import { Projects } from '../Programs/Projects/Projects'
+import { Projects } from '../Programs/Projects/Projects.jsx'
 import { Settings } from '../Programs/Settings/Settings.js'
 import { Blog } from '../Programs/Blog/Blog'
 import { MdOutlineForum } from 'react-icons/md'
@@ -12,6 +12,10 @@ import { Lune } from '../Programs/Lune/Lune'
 import { Roshi } from '../Programs/Roshi/Roshi'
 import { GiHealthNormal } from 'react-icons/gi'
 import { Notes } from '../Programs/Notes/Notes'
+
+//Summary section ------------------------------------------------------------
+//This file contains a list of json objects that contain the data for each app. It also exports each app for easy access to information.
+// --------------------------------------------------------------------------
 
 export const resume = {
         app: <Resume/>,
@@ -75,4 +79,4 @@ export const TaskBarList = [
     projects
 ]
 
-export const AppList = [...TaskBarList, settings, blog, lune,lune,lune,lune,lune,lune,lune,lune,lune,lune,lune,lune,lune, roshi, notes]
+export const AppList = [...TaskBarList, notes]

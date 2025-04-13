@@ -7,6 +7,12 @@ import { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { FaLaptopCode, FaUserAstronaut } from 'react-icons/fa'
 import text from './text.json'
+
+//Summary section ------------------------------------------------------------
+//This component is the about me page. It shows a timeline of my journey as a developer and shares some information about me.
+// --------------------------------------------------------------------------
+
+//A hexagon showing known languages. Currently out of date.
 const Hexagon = ({children, color}) => {
     const [focused, setFocused] = useState(false)
     return (
@@ -46,13 +52,13 @@ const KnownLanguages = () => {
                     </div>
                 </div>
                 <h1 style={{marginTop: '5vh'}}>{text.knownLanguages.header}</h1>
+                <p>I have since started learning Java, Python, and C.</p>
             </div>
         </div>
     )
 }
 
 const SectionOne = () => {
-
     return (
         <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -117,10 +123,9 @@ const SectionThree = () => {
                     {text.journey.timeline.map((item, index) => (
                         <li className="timeline-item" key={index}>
                             <h3>{item.date}</h3>
-                            <p>{item.descriptionOne}</p>
-                            <p>{item.descriptionTwo}</p>
-                            <p>{item.descriptionThree}</p>
-                            <p>{item.descriptionFour}</p>
+                            {item.descriptions.map((description, index) => (
+                                <p key={index}>{description}</p>
+                            ))}
                         </li>
                     ))}
                 </ul>
@@ -182,8 +187,6 @@ export const AboutMe = ({breakPoint}) => {
     
     return (
         <div className="aboutMe" ref={ref}>
-            <div className='brickWall'>
-
                 <SectionOne/>
                 {/* ... other sections ... */}
                 <motion.div 
@@ -251,7 +254,6 @@ export const AboutMe = ({breakPoint}) => {
                 >
                     <Footer/>
                 </motion.div>
-            </div>
         </div>
     )
 }

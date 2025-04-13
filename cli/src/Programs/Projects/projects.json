@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Lune",
+        "description": "A full-featured social media prototype built with Next.js, designed to explore gaps in the content-sharing space. Includes post feeds, profiles, and authentication routing.",
+        "tech": ["Next.js", "JavaScript", "SSR", "Modular UI"],
+        "github": "https://github.com/Ningauble479/Lune",
+        "live": null,
+        "status": "Front-end prototype only — not connected to a backend"
+      },
+    {
+      "title": "ReactDesktop",
+      "description": "Custom-built portfolio styled as a desktop interface with internal routing and persistent apps.",
+      "tech": ["React", "JavaScript", "LocalStorage"],
+      "github": "https://github.com/Ningauble479/ReactDesktop",
+      "live": "https://www.devono.dev",
+      "status": "Live"
+    },
+    {
+      "title": "NestJS Discord Bot",
+      "description": "Production-ready Discord bot built using NestJS and Prisma with custom features, point system, and command routing.",
+      "tech": ["NestJS", "Prisma", "Discord.js"],
+      "github": "https://github.com/Ningauble479/discord-bot", 
+      "live": null,
+      "status": "Running privately on Discord"
+    }
+]
