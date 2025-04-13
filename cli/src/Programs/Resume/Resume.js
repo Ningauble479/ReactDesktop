@@ -1,12 +1,26 @@
+import './resume.css'
 
+//Summary -------------------------------------------------------------------------------------------------------
+//This component is a simple resume viewer that allows the user to view my resume.
+// ----------------------------------------------------------------------------------------------------------------
 
 export const Resume = () => {
+  return (
+    <div className="resume-container">
+      <div className="resume-header">
+        <h2 className="resume-title">Resume</h2>
+        <p className="resume-note">
+          This is a general version of my resume. I tailor each version to match specific roles.
+        </p>
+      </div>
 
-    return (
-        <div style={{width: '100%', height: '99%'}}>
-            <iframe 
-            style={{width: '99%', height: "100%"}} 
-            src="https://docs.google.com/document/d/1cDqtAiy8Swz8PLTgg-J2wzdU81cmJXCtFxphEMZ7IlY/edit?usp=sharing"/>
-        </div>
-    )
-}
+      <div className="resume-embed-container">
+        <embed
+          src="/resume.pdf"
+          type="application/pdf"
+          className="resume-pdf"
+        />
+      </div>
+    </div>
+  );
+};

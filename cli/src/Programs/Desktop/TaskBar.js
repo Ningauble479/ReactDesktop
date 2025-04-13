@@ -3,9 +3,16 @@ import { useContext, useEffect, useState } from 'react'
 import { AppsContext } from '../../Context/appsContext'
 import { TaskBarList } from '../../Data/Apps'
 
+//Summary -------------------------------------------------------------------------------------------------------
+//This component is the task bar that appears at the bottom of the screen.
+//It allows the user to open and close apps.
+//When an app first becomes active, it will appear in the task bar and will disappear when it is closed.
+// ----------------------------------------------------------------------------------------------------------------
+
+
 export const TaskBox = ({item}) => {
 
-    const { icon, name, app, style } = item
+    const { icon, name, app } = item
     const [ toolTip, setToolTip ] = useState(false)
     const [ itemState, setItemState ] = useState(null)
     const { addToList, setStartOpen, startOpen, activeList } = useContext(AppsContext)

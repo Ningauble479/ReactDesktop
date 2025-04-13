@@ -4,7 +4,7 @@ import { TfiNotepad } from 'react-icons/tfi'
 
 import { Resume } from '../Programs/Resume/Resume'
 import { AboutMe } from '../Programs/AboutMe/AboutMe'
-import { Projects } from '../Programs/Projects/Projects'
+import { Projects } from '../Programs/Projects/Projects.jsx'
 import { Settings } from '../Programs/Settings/Settings.js'
 import { Blog } from '../Programs/Blog/Blog'
 import { MdOutlineForum } from 'react-icons/md'
