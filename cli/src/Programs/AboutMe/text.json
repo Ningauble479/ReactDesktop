@@ -10,28 +10,31 @@
         "p3": "From building full-stack applications with the MERN stack to developing a professional-level understanding of operating systems, I’ve always loved automating tasks and crafting practical solutions.",
         "p4": "Seeing people use and benefit from what I build is what keeps me going. It’s deeply satisfying — and I love every part of the process."
     },
-"journey": {
-  "header": "Professional Journey",
-  "p1": "I started my software development career by building full-stack applications with the MERN stack, which gave me a solid foundation in modern web technologies.",
-  "timeline": [
-    {
-      "date": "2018–2021",
-      "descriptionOne": "I completed a web development bootcamp at UCI in Irvine, where I learned to build full-stack applications using the MERN stack.",
-      "descriptionTwo": "During that time, I co-developed RoshiHealth, a wellness app that helped users track health goals. I worked on the front end using React.js, while our backend used Node.js and MongoDB.",
-      "descriptionThree": "After that, I began building a social media platform using Next.js and MongoDB, shifting my focus from syntax to architecture and project structure.",
-      "descriptionFour": "I also earned my CompTIA A+ certification and began exploring how networking ties into software development.",
-      "descriptionFive": ""
+    "journey": {
+        "header": "Professional Journey",
+        "p1": "I started my software development career by building full-stack applications with the MERN stack, which gave me a solid foundation in modern web technologies.",
+        "timeline": [
+            {
+                "date": "2018–2021",
+                "descriptions": [
+                    "I completed a web development bootcamp at UCI in Irvine, where I learned to build full-stack applications using the MERN stack.",
+                    "During that time, I co-developed RoshiHealth, a wellness app that helped users track health goals. I worked on the front end using React.js, while our backend used Node.js and MongoDB.",
+                    "After that, I began building a social media platform using Next.js and MongoDB, shifting my focus from syntax to architecture and project structure.",
+                    "I also earned my CompTIA A+ certification and began exploring how networking ties into software development."
+                ]
+            },
+            {
+                "date": "2021–Present",
+                "descriptions": [
+                    "After moving to Minnesota, I joined MCSI as a Junior Developer, where I contributed to internal tools and client-facing web applications using JavaScript and the CMS platform joomla.",
+                    "At GreatWoods Cabinetry, I was hired to build a custom order management system while also handling network infrastructure and hardware troubleshooting across the company.",
+                    "I worked at TDX Technologies to support and maintain client networks, focusing on software troubleshooting, system recovery, and diagnostics across Windows environments.",
+                    "At UptimeLegal, I served as a Tier 3 Software Support Engineer, specializing in complex issue resolution, automation, and system optimization across law firm platforms and server infrastructure.",
+                    "Alongside this role, I’ve been building production-level web apps and internal tools using React and Node.js, further refining my full-stack development skill set."
+                ]
+            }
+        ]
     },
-    {
-      "date": "2021–Present",
-      "descriptionOne": "After moving to Minnesota, I joined MCSI as a Junior Developer, where I contributed to custom web applications and continued expanding my skills through personal projects.",
-      "descriptionTwo": "I then worked with GreatWoods Cabinetry, developing a custom ordering site and assisting with network infrastructure and hardware repairs.",
-      "descriptionThree": "My time with TDX Technologies deepened my experience in software support and networking, leading to my current role at UptimeLegal as a Tier 3 Software Support Engineer.",
-      "descriptionFour": "There, I’ve developed a strong understanding of Windows systems and enterprise-level software environments.",
-      "descriptionFive": ""
-    }
-  ]
-},
     "uxPhilosophy": {
         "header": "My UX Philosophy",
         "p1": "I believe successful applications should be simple, effective, and intuitive. A great program makes tasks easier and helps users accomplish them without friction."

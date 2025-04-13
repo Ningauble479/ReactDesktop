@@ -123,10 +123,9 @@ const SectionThree = () => {
                     {text.journey.timeline.map((item, index) => (
                         <li className="timeline-item" key={index}>
                             <h3>{item.date}</h3>
-                            <p>{item.descriptionOne}</p>
-                            <p>{item.descriptionTwo}</p>
-                            <p>{item.descriptionThree}</p>
-                            <p>{item.descriptionFour}</p>
+                            {item.descriptions.map((description, index) => (
+                                <p key={index}>{description}</p>
+                            ))}
                         </li>
                     ))}
                 </ul>
