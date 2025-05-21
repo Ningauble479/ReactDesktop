@@ -11,18 +11,9 @@
         "p4": "Seeing people use and benefit from what I build is what keeps me going. It’s deeply satisfying — and I love every part of the process."
     },
     "journey": {
-        "header": "Professional Journey",
+        "header": "Journey",
         "p1": "I started my software development career by building full-stack applications with the MERN stack, which gave me a solid foundation in modern web technologies.",
         "timeline": [
-            {
-                "date": "2018–2021",
-                "descriptions": [
-                    "I completed a web development bootcamp at UCI in Irvine, where I learned to build full-stack applications using the MERN stack.",
-                    "During that time, I co-developed RoshiHealth, a wellness app that helped users track health goals. I worked on the front end using React.js, while our backend used Node.js and MongoDB.",
-                    "After that, I began building a social media platform using Next.js and MongoDB, shifting my focus from syntax to architecture and project structure.",
-                    "I also earned my CompTIA A+ certification and began exploring how networking ties into software development."
-                ]
-            },
             {
                 "date": "2021–Present",
                 "descriptions": [
@@ -31,6 +22,15 @@
                     "I worked at TDX Technologies to support and maintain client networks, focusing on software troubleshooting, system recovery, and diagnostics across Windows environments.",
                     "At UptimeLegal, I served as a Tier 3 Software Support Engineer, specializing in complex issue resolution, automation, and system optimization across law firm platforms and server infrastructure.",
                     "Alongside this role, I’ve been building production-level web apps and internal tools using React and Node.js, further refining my full-stack development skill set."
+                ]
+            },
+            {
+                "date": "2018–2021",
+                "descriptions": [
+                    "I completed a web development bootcamp at UCI in Irvine, where I learned to build full-stack applications using the MERN stack.",
+                    "During that time, I co-developed RoshiHealth, a wellness app that helped users track health goals. I worked on the front end using React.js, while our backend used Node.js and MongoDB.",
+                    "After that, I began building a social media platform using Next.js and MongoDB, shifting my focus from syntax to architecture and project structure.",
+                    "I also earned my CompTIA A+ certification and began exploring how networking ties into software development."
                 ]
             }
         ]
@@ -55,7 +55,7 @@
         "p1": "Thank you for exploring my UX programming portfolio and getting to know me better. I'm excited about the opportunity to collaborate with you and contribute to creating exceptional digital experiences."
     },
     "knownLanguages": {
-        "header": "Known Programming Languages",
+        "header": "Known Programming Languages/Frameworks",
         "p1": "I'm proficient in several programming languages, each serving a unique purpose in my UX programming toolkit. These languages enable me to:",
         "list": [
             "Create dynamic and responsive web applications",
