@@ -3,58 +3,58 @@ import { BiLogoReact } from 'react-icons/bi'
 import { DiJavascript1 } from 'react-icons/di'
 import { FaPhp, FaNode } from 'react-icons/fa'
 import { MdHtml, MdCss } from 'react-icons/md'
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { FaLaptopCode, FaUserAstronaut } from 'react-icons/fa'
 import text from './text.json'
-
+import { TallAd } from '../../Components/Ads/Ads'
 //Summary section ------------------------------------------------------------
 //This component is the about me page. It shows a timeline of my journey as a developer and shares some information about me.
 // --------------------------------------------------------------------------
 
 //A hexagon showing known languages. Currently out of date.
-const Hexagon = ({children, color}) => {
+const Hexagon = ({ children, color }) => {
     const [focused, setFocused] = useState(false)
     return (
-        <div style={{color: color}} className={`hex`} onMouseEnter={()=>setFocused(true)} onMouseLeave={()=>setFocused(false)}>
+        <div style={{ color: color }} className={`hex`} onMouseEnter={() => setFocused(true)} onMouseLeave={() => setFocused(false)}>
             <div className='top'>
-                {focused ? <div className='shadow'/> : null}
+                {focused ? <div className='shadow' /> : null}
             </div>
             <div className='middle'>
-                {focused ? <div className='shadow'/> : null}
+                {focused ? <div className='shadow' /> : null}
                 {children}
             </div>
             <div className='bottom'>
-                {focused ? <div className='shadow'/> : null}
+                {focused ? <div className='shadow' /> : null}
             </div>
-            </div>
+        </div>
     )
 }
 
 const KnownLanguages = () => {
-    const fullSize = {width: '100%', height: '100%'}
+    const fullSize = { width: '100%', height: '100%' }
     return (
-        <div>
+        <>
             <div className="centeredColumn rightColumn">
                 <div className='hexagon'>
                     <div className='hex-row'>
-                        <Hexagon text="PHP"><FaPhp style={fullSize}/></Hexagon>
-                        <Hexagon text="JS" ><DiJavascript1 style={fullSize}/></Hexagon>
+                        <Hexagon text="PHP"><FaPhp style={fullSize} /></Hexagon>
+                        <Hexagon text="JS" ><DiJavascript1 style={fullSize} /></Hexagon>
                     </div>
                     <div className='hex-row'>
-                        <Hexagon text="CSS"><MdCss style={fullSize}/></Hexagon>
-                        <Hexagon text="HTML"><MdHtml style={fullSize}/></Hexagon>
-                        <Hexagon text="React"><BiLogoReact style={fullSize}/></Hexagon>
+                        <Hexagon text="CSS"><MdCss style={fullSize} /></Hexagon>
+                        <Hexagon text="HTML"><MdHtml style={fullSize} /></Hexagon>
+                        <Hexagon text="React"><BiLogoReact style={fullSize} /></Hexagon>
                     </div>
                     <div className='hex-row'>
-                        <Hexagon text="Node"><FaNode style={fullSize}/></Hexagon>
+                        <Hexagon text="Node"><FaNode style={fullSize} /></Hexagon>
                         <Hexagon text="C#"><h1>C#</h1></Hexagon>
                     </div>
                 </div>
-                <h1 style={{marginTop: '5vh'}}>{text.knownLanguages.header}</h1>
+                <h1 style={{ marginTop: '5vh' }}>{text.knownLanguages.header}</h1>
                 <p>I have since started learning Java, Python, and C.</p>
             </div>
-        </div>
+        </>
     )
 }
 
@@ -73,8 +73,8 @@ const SectionOne = () => {
                 </div>
             </div>
             <div className="intro-image">
-                    <FaUserAstronaut size={150} color="#3498db" />
-            </div> 
+                <FaUserAstronaut size={150} color="#3498db" />
+            </div>
         </motion.div>
     )
 }
@@ -157,10 +157,10 @@ const SectionSix = () => {
     return (
         <div>
             <h1>{text.connect.header}</h1>
-                <p>{text.connect.p1}</p>
-                <p>{text.connect.p2}</p>
-                <p>{text.connect.p3}</p>
-                <p>{text.connect.p4}</p>
+            <p>{text.connect.p1}</p>
+            <p>{text.connect.p2}</p>
+            <p>{text.connect.p3}</p>
+            <p>{text.connect.p4}</p>
         </div>
     )
 }
@@ -182,78 +182,83 @@ const Footer = () => {
     )
 }
 
-export const AboutMe = ({breakPoint}) => {
+export const AboutMe = ({ breakPoint }) => {
     const ref = useRef(null)
-    
+
     return (
         <div className="aboutMe" ref={ref}>
-                <SectionOne/>
-                {/* ... other sections ... */}
-                <motion.div 
-                    className={`section ${breakPoint === 'smallWidth' ? 'sectionTwo' : null}`}
-                    id="section2"
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                >
-                    <SectionTwo/>
-                </motion.div>
-                <div className='knownLanguages'>
-                    <KnownLanguages/>
-                </div>
-                <motion.div 
-                    className={`section ${breakPoint === 'smallWidth' ? 'sectionThree' : null}`}
-                    id="section3"
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                >
-                    <SectionThree/>
-                </motion.div>
-                <motion.div 
-                    className={`section ${breakPoint === 'smallWidth' ? 'sectionFour' : null}`}
-                    id="section4"
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                >
-                    <SectionFour/>
-                </motion.div>
-                <motion.div 
-                    className={`section ${breakPoint === 'smallWidth' ? 'sectionFive' : null}`}
-                    id="section5"
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                >
-                    <SectionFive/>
-                </motion.div>
-                <motion.div 
-                    className={`section ${breakPoint === 'smallWidth' ? 'sectionSix' : null}`}
-                    id="section6"
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                >
-                    <SectionSix/>
-                </motion.div>
-                <motion.div 
-                    className='section'
-                    id="section8"
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                >
-                    <SectionEight/>
-                </motion.div>
-                <motion.div 
-                    className='section'
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                >
-                    <Footer/>
-                </motion.div>
+            <div className='content'>
+            <SectionOne />
+            {/* ... other sections ... */}
+            <motion.div
+                className={`section ${breakPoint === 'smallWidth' ? 'sectionTwo' : null}`}
+                id="section2"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+            >
+                <SectionTwo />
+            </motion.div>
+            <div className='knownLanguages'>
+                <KnownLanguages />
+            </div>
+            <motion.div
+                className={`section ${breakPoint === 'smallWidth' ? 'sectionThree' : null}`}
+                id="section3"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+            >
+                <SectionThree />
+            </motion.div>
+            <motion.div
+                className={`section ${breakPoint === 'smallWidth' ? 'sectionFour' : null}`}
+                id="section4"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+            >
+                <SectionFour />
+            </motion.div>
+            <motion.div
+                className={`section ${breakPoint === 'smallWidth' ? 'sectionFive' : null}`}
+                id="section5"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+            >
+                <SectionFive />
+            </motion.div>
+            <motion.div
+                className={`section ${breakPoint === 'smallWidth' ? 'sectionSix' : null}`}
+                id="section6"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+            >
+                <SectionSix />
+            </motion.div>
+            <motion.div
+                className='section'
+                id="section8"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+            >
+                <SectionEight />
+            </motion.div>
+            <motion.div
+                className='section'
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+            >
+                <Footer />
+            </motion.div>
+            </div>
+            <div className='adSection'>
+                <TallAd classes={"FloatingAd"}/>
+            </div>
         </div>
     )
 }

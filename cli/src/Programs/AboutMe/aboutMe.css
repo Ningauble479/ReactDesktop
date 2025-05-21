@@ -1,8 +1,6 @@
 .aboutMe {
-    width: 100%;
-    min-height: 330vh;
     display: flex;
-    flex-direction: column;
+    width: 100%;
     color: #f0f0f0;
     background-color: #1A1A1A;
     background-image: 
@@ -10,6 +8,19 @@
         radial-gradient(circle at 75px 75px, rgba(255, 255, 255, 0.2) 2%, transparent 0%);
     background-size: 100px 100px;
     font-family: 'Roboto', sans-serif;
+}
+
+.content {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 70%;
+}
+
+.adSection {
+    position: relative;
+    width: 30%;
 }
 
 .section {

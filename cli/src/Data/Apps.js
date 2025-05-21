@@ -12,6 +12,7 @@ import { Lune } from '../Programs/Lune/Lune'
 import { Roshi } from '../Programs/Roshi/Roshi'
 import { GiHealthNormal } from 'react-icons/gi'
 import { Notes } from '../Programs/Notes/Notes'
+import { AdSystem } from '../Programs/AdSystem/AdSystem'
 
 //Summary section ------------------------------------------------------------
 //This file contains a list of json objects that contain the data for each app. It also exports each app for easy access to information.
@@ -23,6 +24,13 @@ export const resume = {
         icon: <FcDocument/>,
         description: "This is my resume. It is a document that contains my work experience, education, and skills."
     }
+
+export const adSystem = {
+    app: <AdSystem/>,
+    name: "Ad System",
+    icon: <BsFillFileEarmarkPersonFill/>,
+    description: "This shows the ads youve seen and which ones youve interacted with."
+}
 
 export const aboutMe = {
         app: <AboutMe/>,
@@ -76,7 +84,8 @@ export const notes = {
 export const TaskBarList = [
     resume,
     aboutMe,
-    projects
+    projects,
+    adSystem
 ]
 
 export const AppList = [...TaskBarList, notes]
